@@ -1,0 +1,26 @@
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    background-size: auto;
+}
+
+.gallery_grid{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: -16px;
+    margin-top: 0;
+}
+
+.gallery_grid__item{
+    flex-basis: calc(100% / 3 - 16px);
+    min-width: 240px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 16px;
+}
