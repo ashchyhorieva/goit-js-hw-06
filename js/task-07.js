@@ -10,7 +10,7 @@ console.log(sliderEl.value);
 const textEl = document.querySelector('span#text');
 console.log(textEl.textContent);
 
-sliderEl.addEventListener('change', setFontSize);
+sliderEl.addEventListener('input', setFontSize);
 
 function setFontSize() {
     

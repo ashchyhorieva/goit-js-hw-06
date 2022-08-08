@@ -16,24 +16,36 @@
 //очисти значення полів форми методом reset.
 
 const form = document.querySelector('.login-form');
-console.log(form);
+//console.log(form);
 
 form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
-    console.log('click');
-
+    //console.log('click');
     event.preventDefault();
 
-    const {
-        elements: { email, password }
-    } = event.currentTarget;
+    const formElements = event.currentTarget.elements;
+    console.log(formElements);
+
+    const email = formElements.email.value;
+    const password = formElements.password.value;
+
+    //const {
+    //    elements: { email, password }
+    //} = event.currentTarget;
 
     if (email.value === '' || password.value === ''){
         return alert('Please fill in all the fields!');
     };
 
-    console.log(`email: ${email.value}, password: ${password.value}`);
+    //console.log(`email: ${email}, password: ${password}`);
+
+    const formData = {
+        email,
+        password,
+    };
+
+    console.log(formData);
 
     event.currentTarget.reset();
 };

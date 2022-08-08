@@ -19,10 +19,12 @@ function onInputBlur() {
 
     if (textInput.value.length === Number(inputLength.dataset.length)) {
         textInput.classList.add('valid');
-        console.log("Added class: valid");
+        textInput.classList.remove('invalid');
+        //console.log("Added class: valid");
     } else {
         textInput.classList.add('invalid');
-        console.log("Added class: invalid");    
+        textInput.classList.remove('valid');
+        //console.log("Added class: invalid");    
     };
 
     console.log(onInputBlur);
